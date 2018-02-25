@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mason.androidapp.LookupActivity">
+
+
+    <EditText
+        android:id="@+id/summoner_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/lookup_prompt"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:id="@+id/lookup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lookup"
+        android:layout_below="@+id/summoner_name"
+        android:layout_centerHorizontal="true"
+        />
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AndroidApp</string>
+    <string name="host">http://35.196.163.167:8080</string>
+    <string name="lookup_prompt">Enter your Summoner Name</string>
+    <string name="lookup">Lookup</string>
+</resources>

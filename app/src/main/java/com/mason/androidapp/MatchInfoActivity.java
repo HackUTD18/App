@@ -18,32 +18,24 @@ public class MatchInfoActivity extends Activity {
         Enemy enemy;
         String nameID;
         TextView name;
+        String tiltID;
+        TextView tilt;
         String iconID;
         ImageView icon;
-        String reasonsID;
-        TextView reasonView;
-        String[] reasons;
-        for(int i = 1; i < 6; i++) {
+        for (int i = 1; i < 6; i++) {
             enemy = enemies[i - 1];
 
             nameID = "info_enemy_" + i + "_name";
             name = findViewById(getResources().getIdentifier(nameID, "id", getPackageName()));
-            name.setText(enemy.getName() + " " + enemy.getTilt());
+            name.setText(enemy.getName());
+
+            tiltID = "info_enemy_" + i + "_tilt";
+            tilt = findViewById(getResources().getIdentifier(tiltID, "id", getPackageName()));
+            tilt.setText(String.valueOf(enemy.getTilt()) + "%");
 
             iconID = "info_enemy_" + i + "_icon";
             icon = findViewById(getResources().getIdentifier(iconID, "id", getPackageName()));
-            icon.setImageResource(R.drawable.icon);
-
-            reasons = enemy.getReasons();
-            reasonsID = "info_enemy_" + i + "_reasons";
-            reasonView = findViewById(getResources().getIdentifier(reasonsID, "id", getPackageName()));
-            StringBuilder builder = new StringBuilder();
-            for(int j = 0; j < 3; j++) {
-                builder.append("  ");
-                builder.append(reasons[j]);
-                builder.append("\n");
-            }
-            reasonView.setText(builder.toString());
+            icon.setImageResource(getResources().getIdentifier("a" + enemy.getChamp(), "drawable", getPackageName()));
         }
     }
 }

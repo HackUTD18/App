@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class LookupActivity extends Activity {
 
@@ -15,12 +16,20 @@ public class LookupActivity extends Activity {
         setContentView(R.layout.activity_lookup);
 
         final Intent requestIntent = new Intent(this, RequestActivity.class);
-        final EditText summonerName = (EditText) findViewById(R.id.summoner_name);
-        final Button lookupButton = (Button) findViewById(R.id.lookup_button);
-        lookupButton.setOnClickListener(new View.OnClickListener() {
+        final EditText summonerName = findViewById(R.id.summoner_name);
+        final ImageButton enemyTeam = findViewById(R.id.enemy_team);
+        final ImageButton allyTeam = findViewById(R.id.my_team);
+        enemyTeam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LookupManager.ref.setSummonerName(summonerName.getText().toString());
+                LookupManager.ref.setSummonerName("oteam" + summonerName.getText().toString().replaceAll(" ", ""));
+                startActivity(requestIntent);
+            }
+        });
+        allyTeam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LookupManager.ref.setSummonerName("mteam" + summonerName.getText().toString().replaceAll(" ", ""));
                 startActivity(requestIntent);
             }
         });

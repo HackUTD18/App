@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical"
     tools:context="com.mason.androidapp.MatchInfoActivity">
 
@@ -20,12 +21,21 @@
             android:id="@+id/info_enemy_1_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/info_enemy_1_icon" />
+            android:layout_centerHorizontal="true"
+            android:fontFamily="casual"
+            android:paddingTop="45dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/info_enemy_1_reasons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:id="@+id/info_enemy_1_tilt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="casual"
+            android:paddingTop="45dp"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="45sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -42,12 +52,22 @@
             android:id="@+id/info_enemy_2_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/info_enemy_2_icon" />
+            android:layout_centerHorizontal="true"
+            android:fontFamily="casual"
+            android:paddingTop="45dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp" />
+
 
         <TextView
-            android:id="@+id/info_enemy_2_reasons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:id="@+id/info_enemy_2_tilt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="casual"
+            android:paddingTop="45dp"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="45sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -64,12 +84,21 @@
             android:id="@+id/info_enemy_3_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/info_enemy_3_icon" />
+            android:layout_centerHorizontal="true"
+            android:fontFamily="casual"
+            android:paddingTop="45dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/info_enemy_3_reasons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:id="@+id/info_enemy_3_tilt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="casual"
+            android:paddingTop="45dp"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="45sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -86,12 +115,22 @@
             android:id="@+id/info_enemy_4_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/info_enemy_4_icon" />
+            android:layout_centerHorizontal="true"
+            android:fontFamily="casual"
+            android:paddingTop="45dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp" />
+
 
         <TextView
-            android:id="@+id/info_enemy_4_reasons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:id="@+id/info_enemy_4_tilt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="casual"
+            android:paddingTop="45dp"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="45sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -108,11 +147,21 @@
             android:id="@+id/info_enemy_5_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/info_enemy_5_icon" />
+            android:paddingTop="45dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="casual"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp" />
+
 
         <TextView
-            android:id="@+id/info_enemy_5_reasons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:id="@+id/info_enemy_5_tilt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="casual"
+            android:paddingTop="45dp"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="45sp" />
     </RelativeLayout>
 </LinearLayout>

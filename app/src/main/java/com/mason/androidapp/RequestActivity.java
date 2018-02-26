@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -21,6 +22,7 @@ public class RequestActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_request);
 
         String summonerName = LookupManager.ref.getSummonerName();
 
@@ -45,7 +47,9 @@ public class RequestActivity extends Activity {
                     finish();
                 } else {
                     LookupManager.ref.handleResponse(response);
+                    System.out.println(response);
                     startActivity(infoIntent);
+                    finish();
                 }
             }
         }, new Response.ErrorListener() {
@@ -56,6 +60,7 @@ public class RequestActivity extends Activity {
                 finish();
             }
         });
+        request.setRetryPolicy(new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS * 10, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         queue.add(request);
     }
 }
